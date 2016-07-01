@@ -12,11 +12,20 @@ We use two kinds of data:
 ## Keywords
 Distributed Database System - Graph Partitioning - Database Graph Modeling - Database as a Service
 
+## How to chunk table
+As we discussed we use horizontal (which separates rows of table from each other and models them into graph nodes) and vertical partitioning (which separates columns of table) together.
+
 ## Installation
-After cloning this repository, you'll have to install it's dependencies.
+After cloning this repository, you'll have to install it's dependencies. We used [NetworkX](https://github.com/networkx/networkx) python package for implementation, so you'll have to install it.
 
 ```bash
-pip install networkx
+$ pip install networkx
+```
+
+Decorator package is also required (for NetworkX).
+
+```bash
+$ pip install decorator
 ```
 
 # References
