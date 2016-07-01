@@ -1,9 +1,10 @@
 # Graph Partitioning enhancement in Relational Cloud
+My master's project implementation.
 
-My master's project implementation
+## Abstract
 
-# Keywords
-Distributed Database System - Graph Partitioning - Database Graph Modeling
+## Keywords
+Distributed Database System - Graph Partitioning - Database Graph Modeling - Database as a Service
 
 # References
 1. Rountree, Derrick, and Ileana Castrillo. The Basics of Cloud Computing: Understanding the Fundamentals of Cloud Computing in Theory and Practice. Newnes, 2013.
