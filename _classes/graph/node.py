@@ -16,7 +16,7 @@ class Node(nx.Node):
         calculate energy of node.
         :return:
         """
-        return self.neighboars_count() - self.neighboars_count(self.color)
+        return self.neighbors_count() - self.neighbors_count(self.color)
 
     def neighbors(self, color=None):
         """
@@ -36,7 +36,7 @@ class Node(nx.Node):
 
         return required
 
-    def neighboars_count(self, color=None):
+    def neighbors_count(self, color=None):
         """
         get number of neighbors with this color
         :param color:
