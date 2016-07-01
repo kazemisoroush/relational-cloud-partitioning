@@ -4,11 +4,18 @@ In this project we first model a single table from a relational database into a 
 ## Data-set
 We use two kinds of data:
 
-1. One big relational database table.
+1. One big relational database table from one of the known social networks.
 2. Test queries into that database.
 
 ## Keywords
 Distributed Database System - Graph Partitioning - Database Graph Modeling - Database as a Service
+
+## Installation
+After cloning this repository, you'll have to install it's dependencies.
+
+```bash
+pip install networkx
+```
 
 # References
 1. [Rountree, Derrick, and Ileana Castrillo. The basics of cloud computing: Understanding the fundamentals of cloud computing in theory and practice. Newnes, 2013.](https://books.google.com/books?hl=en&lr=&id=k7gwl2jgBBwC&oi=fnd&pg=PP1&dq=Rountree,+Derrick,+and+Ileana+Castrillo.+The+Basics+of+Cloud+Computing:+Understanding+the+Fundamentals+of+Cloud+Computing+in+Theory+and+Practice.+Newnes,+2013.&ots=Q9u_TTi0yH&sig=ph9Ew3k34JqzyN43CKe6ts93UVw)
