@@ -1,5 +1,10 @@
 # Graph Partitioning Enhancement in Relational Cloud
-My master's project implementation.
+In this project we first model a single table from a relational database into a graph, then we partition this single graph into known number of partitions. We use both horizontal and vertical partitioning in order to find natural relations between __chunks__ of data.
+
+We use two kinds of data:
+
+1. One big relational database table.
+2. Test queries into that database.
 
 ## Abstract
 
