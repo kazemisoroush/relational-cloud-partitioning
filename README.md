@@ -1,6 +1,8 @@
 # Graph Partitioning Enhancement in Relational Cloud
 In this project we first model a single table from a relational database into a graph, then we partition this single graph into known number of partitions. We use both horizontal and vertical partitioning in order to find natural relations between __chunks__ of data.
 
+Relational Cloud is refer to a kind of distributed database system that is relational. We use [Jabe-Ja](http://www.sics.se/~fatemeh/files/papers/jabeja.pdf) graph partitioning algorithm in this project which is a kind used to partition social media modeled graphs.
+
 ## Data-set
 We use two kinds of data:
 
