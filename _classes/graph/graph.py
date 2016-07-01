@@ -12,8 +12,13 @@ class Graph(nx.Graph):
 
     def energy(self):
         """
-        TODO: calculate graph's energy.
+        Calculate graph's energy. (is equal to sum of energy of all nodes)
         :return:
         """
-        # return sum of energy of all nodes.
-        return 0
+        nodes = self.nodes()
+        energy = 0
+
+        for node in nodes:
+            energy += node.energy()
+
+        return energy
