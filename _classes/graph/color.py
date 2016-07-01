@@ -2,16 +2,16 @@ __author__ = 'Soroush'
 
 
 class Color(object):
-    def __init__(self):
+    def __init__(self, label):
         """
         :return:
         """
-        pass
+        self.label = label
 
     def is_equal_to(self, color):
         """
-        TODO: check whether this color is equal to input color.
+        check whether this color is equal to input color.
         :param color:
         :return:
         """
-        return False
+        return color.label == self.label

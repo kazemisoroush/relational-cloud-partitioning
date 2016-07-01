@@ -10,24 +10,36 @@ class Node(nx.Node):
         :return:
         """
         self.color = color
-        pass
 
     def energy(self):
         """
-        TODO: calculate energy of node.
+        calculate energy of node.
         :return:
         """
-        return 0
+        return self.neighboars_count() - self.neighboars_count(self.color)
 
-    def neighboars(self, color=None):
+    def neighbors(self, color=None):
         """
-        TODO: get array of neighbors of this node.
+        get array of neighbors of this node with specific color.
         :param color:
         :return:
         """
-        if color is None:
-            # get all neighbors.
-            return []
+        # TODO: get neighbors of this node
+        neighbors = self.get_neighbors
+        required = []
 
-        # get (color = color) neighbors.
-        return []
+        for neighbor in neighbors:
+            if color is None:
+                required.append(neighbor)
+            elif neighbor.color.is_equal_to(color):
+                required.append(neighbor)
+
+        return required
+
+    def neighboars_count(self, color=None):
+        """
+        get number of neighbors with this color
+        :param color:
+        :return:
+        """
+        return len(self.neighbors(color))
