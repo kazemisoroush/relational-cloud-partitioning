@@ -7,7 +7,7 @@ class JabeJa(object):
     graph into equal-sized components. In this algorithm, each node of
     the graph is a processing unit, with `local` information about
     it's neighbor nodes, and small sub-set of random nodes in
-    the graph.
+    the graph. We need to minimize the graph energy.
     """
 
     def __init__(self):
