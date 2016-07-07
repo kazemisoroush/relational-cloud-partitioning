@@ -3,6 +3,12 @@ In this project we first model a single table from a relational database into a 
 
 Relational Cloud is refer to a kind of distributed database system that is relational. We use [Jabe-Ja](http://www.sics.se/~fatemeh/files/papers/jabeja.pdf) ([GitHub](https://github.com/fatemehr/jabeja)) graph partitioning algorithm in this project which is a kind used to partition social media modeled graphs.
 
+## Why Vertical Partitioning?
+
+1. To better separate naturally disjointed parts of data.
+2. To better join naturally related parts of data together.
+3. If we meet these, less machines will work with each query, and that means less energy is used.
+
 ## Data-set
 We use two kinds of data:
 
