@@ -1,6 +1,3 @@
-__author__ = 'Sara'
-
-
 class Partition(object):
     def __init__(self):
         """

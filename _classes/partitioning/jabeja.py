@@ -1,6 +1,3 @@
-__author__ = 'Soroush'
-
-
 class JabeJa(object):
     """
     Balanced graph partitioning refers to the problem of partitioning the
@@ -10,19 +7,15 @@ class JabeJa(object):
     the graph. We need to minimize the graph energy.
     """
 
-    def __init__(self):
+    def __init__(self, partition_count):
         """
         :return:
         """
         # initialize some public variables:
-        # int number_of_partitions
-        # float temperature = 1.5
-        # float temperature_delta = .003
-        # enum message_types = {INFO, ACK, NACK, SWAP}
-        # enum candidate_selection = {LOCAL, RANDOM, HYBRID}
+        self.partition_count = partition_count
         self.partitions = []
 
-    def partition(self, graph, partition_count):
+    def run(self, graph, partition_count):
         """
         TODO: main partitioning algorithm.
         :param graph:

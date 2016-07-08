@@ -1,5 +1,3 @@
-__author__ = 'Soroush'
-
 import networkx as nx
 
 
