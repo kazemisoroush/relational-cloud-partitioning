@@ -3,9 +3,6 @@ __author__ = 'Soroush'
 import networkx as nx
 
 
-# from _classes.graph.color import Color
-
-
 class Node(nx.Node):
     def __init__(self, color):
         """
@@ -40,8 +37,25 @@ class Node(nx.Node):
 
     def neighbors_count(self, color = None):
         """
-        get number of neighbors with this color
+        get number of neighbors with this color.
         :param color:
         :return:
         """
         return len(self.neighbors(color))
+
+    def select_candidate_nodes(self, selecting_type = CANDIDATE_OPTIONS.LOCAL, random_sample = None):
+        """
+        TODO
+        :param random_sample:
+        :param selecting_type:
+        :return:
+        """
+        pass
+
+    def find_swap_partner(self):
+        """
+        TODO: find the best node as swap partner for this node.
+        :return:
+        """
+        self.select_candidate_nodes()
+        pass

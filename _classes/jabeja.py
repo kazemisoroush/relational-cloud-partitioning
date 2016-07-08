@@ -14,10 +14,12 @@ class JabeJa(object):
         """
         :return:
         """
+        # initialize some public variables:
         # int number_of_partitions
         # float temperature = 1.5
         # float temperature_delta = .003
         # enum message_types = {INFO, ACK, NACK, SWAP}
+        # enum candidate_selection = {LOCAL, RANDOM, HYBRID}
         self.partitions = []
 
     def partition(self, graph, partition_count):
@@ -27,11 +29,8 @@ class JabeJa(object):
         :param partition_count:
         :return:
         """
+        # 1. initialize node colors uniformly with `self.number_of_partitions`.
+        # 2. each node iteratively selects another node from it's neighbors or a random sample.
+        #   3. if the color exchange decreases the energy, then swap happens. otherwise, they preserve their colors.
+        #   4.
         return self.partitions
-
-    def find_best_partner(self):
-        """
-        TODO: find the best node as swap partner for node p
-        :return:
-        """
-        return None

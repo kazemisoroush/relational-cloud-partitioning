@@ -25,13 +25,13 @@ As we discussed we use horizontal (which separates rows of table from each other
 After cloning this repository, you'll have to install it's dependencies. We used [NetworkX](https://github.com/networkx/networkx) python package for implementation, so you'll have to install it.
 
 ```bash
-$ pip install networkx
+$ sudo pip install networkx
 ```
 
 Decorator package is also required (for NetworkX).
 
 ```bash
-$ pip install decorator
+$ sudo pip install decorator
 ```
 
 # References
