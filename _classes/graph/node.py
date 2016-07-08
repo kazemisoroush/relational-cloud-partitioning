@@ -1,4 +1,5 @@
 import networkx as nx
+from constants import CANDIDATE_OPTION
 
 
 class Node(nx.Node):
@@ -41,11 +42,37 @@ class Node(nx.Node):
         """
         return len(self.neighbors(color))
 
-    def select_candidate_nodes(self, selecting_type = CANDIDATE_OPTIONS.LOCAL, random_sample = None):
+    def select_candidate_nodes(self, selecting_type = None, random_sample = None):
         """
-        TODO
+        decide which sampling option should be done.
         :param random_sample:
         :param selecting_type:
+        :return:
+        """
+        if selecting_type == CANDIDATE_OPTIONS.RANDOM:
+            return self.sample_randomly(random_sample)
+        elif selecting_type == CANDIDATE_OPTIONS.HYBRID:
+            return self.sample_hybridly(random_sample)
+        else:
+            return self.sample_locally()
+
+    def sample_randomly(self, random_sample = None):
+        """
+        TODO
+        :return:
+        """
+        pass
+
+    def sample_hybridly(self, random_sample = None):
+        """
+        TODO
+        :return:
+        """
+        pass
+
+    def sample_locally(self):
+        """
+        TODO
         :return:
         """
         pass
