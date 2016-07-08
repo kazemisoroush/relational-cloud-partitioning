@@ -5,3 +5,5 @@ class CANDIDATE_OPTION:
 
     def __init__(self):
         pass
+
+ALPHA = .5

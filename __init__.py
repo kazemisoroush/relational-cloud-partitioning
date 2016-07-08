@@ -1,8 +1,8 @@
 __author__ = 'Soroush'
 
-from _classes.constants import CANDIDATE_OPTION
+from _classes.constants import *
 
-print(CANDIDATE_OPTION.LOCAL)
+print(ALPHA)
 
 # load the big table
 # make graph model for attributes
