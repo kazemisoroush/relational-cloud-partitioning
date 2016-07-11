@@ -1,5 +1,6 @@
 import networkx as nx
-from constants import CANDIDATE_OPTION
+from configurations import *
+from parameters import *
 
 
 class Node(nx.Node):

@@ -1,8 +1,13 @@
-from _classes.constants import *
+import configparser
 
 
 def main():
-    print(ALPHA)
+    config = configparser.ConfigParser()
+    config.read('configurations.ini')
+    print(config['partitioning']['SWAP'])
+    # parse configurations...
+    # parse parameters...
+
     # start the timer...
     # load the big table
     # make graph model for attributes
