@@ -4,9 +4,10 @@ import networkx as nx
 class Graph(nx.Graph):
     def __init__(self):
         """
+        Instantiate the NetworkX super graph object.
         :return:
         """
-        pass
+        super(Graph, self).__init__()
 
     def energy(self):
         """
@@ -21,3 +22,7 @@ class Graph(nx.Graph):
             energy += node.energy()
 
         return .5 * energy
+
+    def make_neighbor(self, node, neighbors):
+        for neighbor in neighbors:
+            self.add_edge(node, neighbor)

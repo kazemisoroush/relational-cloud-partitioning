@@ -1,14 +1,10 @@
-import networkx as nx
-from configurations import *
-from parameters import *
-
-
-class Node(nx.Node):
-    def __init__(self, color):
+class Node:
+    def __init__(self, color, graph):
         """
         :return:
         """
         self.color = color
+        self.graph = graph
 
     def energy(self):
         """
@@ -19,12 +15,11 @@ class Node(nx.Node):
 
     def neighbors(self, color = None):
         """
-        get array of neighbors of this node with specific color. referred as N_p(c) in the paper.
+        TODO: get array of neighbors of this node with specific color. referred as N_p(c) in the paper.
         :param color:
         :return:
         """
-        # TODO: get neighbors of this node
-        neighbors = self.get_neighbors
+        neighbors = self.graph.neighbors(self)
         required = []
 
         for neighbor in neighbors:
@@ -85,3 +80,6 @@ class Node(nx.Node):
         """
         self.select_candidate_nodes()
         pass
+
+    def __str__(self):
+        return str(self.color)
