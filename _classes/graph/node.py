@@ -1,9 +1,12 @@
+from _classes.graph.color import Color
+
+
 class Node:
     def __init__(self, color, graph):
         """
         :return:
         """
-        self.color = color
+        self.color = Color(color)
         self.graph = graph
 
     def energy(self):

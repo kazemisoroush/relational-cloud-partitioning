@@ -12,3 +12,10 @@ class Color(object):
         :return:
         """
         return color.label == self.label
+
+    def __str__(self):
+        """
+        how to print graph's node color class.
+        :return:
+        """
+        return self.label

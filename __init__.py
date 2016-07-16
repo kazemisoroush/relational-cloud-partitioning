@@ -32,16 +32,17 @@ def main():
         # loop on the second array and make them neighbors
         graph.make_neighbor(node, neighbors)
 
-        # make a sample data and build the corresponding graph randomly...
+    print(graph.energy())
+    # make a sample data and build the corresponding graph randomly...
 
-        # start the timer...
-        # load the big table
-        # make graph model for attributes
-        # partition the attribute list with ja-be-ja algorithm
-        # make data chunks
-        # make the graph model with data chunks and queries
-        # partition graph with ja-be-ja algorithm
-        # stop the timer...
+    # start the timer...
+    # load the big table
+    # make graph model for attributes
+    # partition the attribute list with ja-be-ja algorithm
+    # make data chunks
+    # make the graph model with data chunks and queries
+    # partition graph with ja-be-ja algorithm
+    # stop the timer...
 
 
 if __name__ == "__main__":
