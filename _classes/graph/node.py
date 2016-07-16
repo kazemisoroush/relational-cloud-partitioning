@@ -42,7 +42,7 @@ class Node:
         """
         return len(self.neighbors(color))
 
-    def select_candidate_nodes(self, selecting_type = None, random_sample = None):
+    def select_candidate_nodes(self, selecting_type = config['CANDIDATE_OPTIONS']['LOCAL'], random_sample = None):
         """
         decide which sampling option should be done.
         :param random_sample:
@@ -81,11 +81,29 @@ class Node:
 
     def find_swap_partner(self):
         """
-        TODO: find the best node as swap partner for this node.
+        find the best node as swap partner for this node.
         :return:
         """
-        self.select_candidate_nodes()
-        pass
+        best_utility = 0
+        best_partner = None
+        alpha = config['PARTITIONING']['ALPHA']
+        temperature = config['PARTITIONING']['TEMPERATURE']
+
+        for q in self.select_candidate_nodes():
+            d_pp = self.neighbors_count(self.color)
+            d_qq = q.neighbors_count(q.color)
+
+            d_pq = self.neighbors_count(q.color)
+            d_qp = q.neighbors_count(self.color)
+
+            old_utility = d_pp ** alpha + d_qq ** alpha
+            new_utility = d_pq ** alpha + d_qp ** alpha
+
+            if (new_utility * temperature > old_utility) or (new_utility > best_utility):
+                best_partner = q
+                best_utility = new_utility
+
+        return best_partner
 
     def __str__(self):
         return str(self.color)
