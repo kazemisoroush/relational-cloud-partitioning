@@ -1,3 +1,4 @@
+from _classes.graph import config
 from _classes.graph.color import Color
 
 
@@ -48,33 +49,35 @@ class Node:
         :param selecting_type:
         :return:
         """
-        if selecting_type == CANDIDATE_OPTIONS.RANDOM:
+        if selecting_type == config['CANDIDATE_OPTIONS']['RANDOM']:
             return self.sample_randomly(random_sample)
-        elif selecting_type == CANDIDATE_OPTIONS.HYBRID:
+        elif selecting_type == config['CANDIDATE_OPTIONS']['HYBRID']:
             return self.sample_hybridly(random_sample)
         else:
             return self.sample_locally()
 
     def sample_randomly(self, random_sample = None):
         """
-        TODO
+        TODO: every node should select a uniform random sample of the nodes in the graph.
         :return:
         """
         pass
 
     def sample_hybridly(self, random_sample = None):
         """
-        TODO
+        TODO: in this policy first the immediate neighbor nodes are selected (i.e., the local policy). If this selection
+        fails to improve the pair-wise utility, the node is given another chance for improvement, by letting it to
+        select nodes from its random sample (i.e., the random policy).
         :return:
         """
         pass
 
     def sample_locally(self):
         """
-        TODO
+        every node should consider it's directly connected neighbors for color exchange.
         :return:
         """
-        pass
+        return self.neighbors()
 
     def find_swap_partner(self):
         """
